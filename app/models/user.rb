@@ -6,6 +6,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   validates :username, presence: true
+  has_many :created_books, foreign_key: 'author_id', class_name: 'Book'
 
   def self.find_for_authentication(warden_condition)
     conditions = warden_condition.dup
