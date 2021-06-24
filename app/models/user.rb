@@ -5,7 +5,7 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-  validates :username, presence: true
+  validates :username, presence: true, length: { minimum: 6 }, uniqueness: true
   has_many :created_books, foreign_key: 'author_id', class_name: 'Book'
 
   def self.find_for_authentication(warden_condition)
