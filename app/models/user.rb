@@ -7,6 +7,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   validates :username, presence: true, length: { minimum: 6 }, uniqueness: true
   has_many :created_books, foreign_key: 'author_id', class_name: 'Book'
+  has_many :groups
 
   def self.find_for_authentication(warden_condition)
     conditions = warden_condition.dup
