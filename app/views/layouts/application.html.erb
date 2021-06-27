@@ -15,7 +15,6 @@
     <header>
           <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
-              <a class="navbar-brand" href="#">Book stats</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -26,6 +25,9 @@
                   </li>
                   <li class="nav-item">
                     <%= books_link(current_user)%>
+                  </li>
+                  <li class="nav-item">
+                    <%= externals_link(current_user)%>
                   </li>
                   <li class="nav-item">
                    <%= profile_link(current_user)%>
@@ -41,13 +43,16 @@
               </div>
             </div>
           </nav>
-          <% if notice%> <p class="notice bg-success"><%= notice %></p> <% end %>
+          <% if notice%> <p class="notice bg-success"><%= notice %></p><% end %>
           <% if alert %><p class="alert bg-warning"><%= alert %></p><%end%>
     </header>
-    <main class="container d-flex flex-column align-items-center">
+    <main >
+      <section class="container d-flex flex-column align-items-center">
       <%= yield %>
+      </section>
     </main>
-    <footer>
+    <footer class="bg-dark text-light fixed-bottom">
+    <div class="d-flex justify-content-center align-items-center" ><p> ror capstone project</p> </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 

@@ -1,13 +1,9 @@
 class UsersController < ApplicationController
-  def index; end
+  
+  def show 
+    @user = User.find(current_user.id)
+    @user_books = @user.created_books
+    @user_groups = @user.groups
+  end
 
-  def new; end
-
-  def create; end
-
-  def edit; end
-
-  def update; end
-
-  def destroy; end
 end

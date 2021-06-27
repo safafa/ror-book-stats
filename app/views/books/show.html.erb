@@ -1,0 +1,8 @@
+<%=@book.name%>
+<%= @book.amount%>
+<% if @book.group %>
+<%= @book.group.name%>
+<%end%>
+
+<%= link_to "Edit", edit_book_path(@book.id) %>
+<%= link_to "Delete", book_path(@book.id), method: :delete %>

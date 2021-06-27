@@ -1,0 +1,5 @@
+<ul> 
+<% books.each do |book|%>
+<li><%= link_to book.name, book_path(book.id) %></li>
+<%end%>
+</ul>

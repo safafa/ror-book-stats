@@ -1,0 +1,16 @@
+<h1> User profile <h1>
+<div>
+Name : <%= @user.username%>
+
+<h2>  stats <h2>
+
+<h3> Groups <h3>
+<%= render "groups/groups", groups: @user_groups%>
+<h3> Books <h3>
+<%= render "books/books", books:@user_books %>
+<%= user_edit(@user)%>
+<%= user_cancel(@user)%>
+</div>
+
+
+  
