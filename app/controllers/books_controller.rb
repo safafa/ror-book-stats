@@ -1,11 +1,11 @@
 class BooksController < ApplicationController
   def index
-    @books = current_user.created_books.includes(:author).order("created_at DESC")
+    @books = current_user.created_books.includes(:author).order('created_at DESC')
     @amount = @books.sum(:amount)
   end
 
   def external
-    @externals = current_user.created_books.external.order("created_at DESC")
+    @externals = current_user.created_books.external.order('created_at DESC')
     @amount_externals = @externals.sum(:amount)
   end
 
@@ -14,7 +14,7 @@ class BooksController < ApplicationController
   end
 
   def new
-    @book =current_user.created_books.build
+    @book = current_user.created_books.build
   end
 
   def create
@@ -25,11 +25,10 @@ class BooksController < ApplicationController
     else
       render :new
     end
-
   end
 
   def edit
-   @book = Book.find(params[:id])
+    @book = Book.find(params[:id])
   end
 
   def update
@@ -39,7 +38,6 @@ class BooksController < ApplicationController
     else
       render :edit
     end
-
   end
 
   def destroy
@@ -48,10 +46,9 @@ class BooksController < ApplicationController
     redirect_to books_path
   end
 
-  private 
+  private
 
   def book_params
     params.require(:book).permit(:name, :amount, :group_id)
   end
 end
-

@@ -1,13 +1,30 @@
-<h1> <%= @user.username%> <h1>
-<div>
-<%= image_tag(@user.icon_link.url)%>
-<%= link_to "All my books", books_path %>
-<%= link_to "All my incategorized books",  external_books_path%>
-<%= link_to "All my groups", groups_path %>
-<h2>  stats <h2>
-<%= @amount_hours%>
-<%= user_edit(@user)%>
-<%= user_cancel(@user)%>
+
+<div class ="d-flex flex-column align-items-center my-3">
+    <%= image_tag(@user.icon_link.url, class: "profile-icon")%>
+    <h1> <%= @user.username%> <h1>
+    <div class ="d-flex flex-column align-items-start">
+    <div class="d-flex">
+        <i class="fas fa-book text-light border-0 rounded-circle p-2"></i>
+        <%= link_to "All my books", books_path, class: "nav-link" %>
+    </div>
+    <div class="d-flex">
+        <i class="fas fa-book text-light border-0 rounded-circle p-2"></i>
+        <%= link_to "All my incategorized books",  external_books_path, class: "nav-link"%>
+    </div>
+    <div class="d-flex">
+        <i class="fas fa-book text-light border-0 rounded-circle p-2"></i>
+        <%= link_to "All my groups", groups_path, class: "nav-link" %>
+    </div>
+    <div class="d-flex">
+        <i class="fas fa-pen text-light border-0 rounded-circle p-2"></i>
+    <%= user_edit(@user)%>
+    </div>
+    <div class="d-flex">
+        <i class="fas fa-trash text-light border-0 rounded-circle p-2"></i>
+        <%= user_cancel(@user)%>
+    </div>
+    </div>
+   
 </div>
 
 

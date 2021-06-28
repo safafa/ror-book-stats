@@ -1,6 +1,6 @@
 class GroupsController < ApplicationController
   def index
-    @groups = current_user.groups.order("name ASC")
+    @groups = current_user.groups.order('name ASC')
   end
 
   def show
@@ -10,7 +10,7 @@ class GroupsController < ApplicationController
   end
 
   def new
-    @group =current_user.groups.build
+    @group = current_user.groups.build
   end
 
   def create
@@ -21,11 +21,10 @@ class GroupsController < ApplicationController
     else
       render :new
     end
-
   end
 
   def edit
-   @group = Group.find(params[:id])
+    @group = Group.find(params[:id])
   end
 
   def update
@@ -35,7 +34,6 @@ class GroupsController < ApplicationController
     else
       render :edit
     end
-
   end
 
   def destroy
@@ -44,7 +42,7 @@ class GroupsController < ApplicationController
     redirect_to user_groups_path
   end
 
-  private 
+  private
 
   def group_params
     params.require(:group).permit(:name, :icon)

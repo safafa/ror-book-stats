@@ -4,7 +4,7 @@
   <%= form.label :amount, "Amount of time: ", class: "form-label text-center"%>
   <%= form.number_field :amount, class: "form-control" %>
   <%= form.label :group, "Belongs to group: ", class: "form-label text-center"%>
-  <%= form.select(:group_id, Group.all.map { |group| ["#{group.name}", group.id] } << ["", nil] , class: "form-control" )%>
+  <%= form.select(:group_id, current_user.groups.map { |group| ["#{group.name}", group.id] } << ["", nil] , class: "form-control" )%>
   </div>
   <%= form.submit "Submit", class:"btn btn-primary" %>
 <%end%>
