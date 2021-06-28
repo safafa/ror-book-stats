@@ -1,4 +1,7 @@
+<p>Total amount of hours: <%=@amount%> </p>
 <%=@group.name%>
 <%= image_tag(@group.icon.url)%>
+<h1> List of books </h1>
+<%= render "books/books", books: @books%>
 
 <%= link_to "Edit", edit_group_path(@group.id)%>

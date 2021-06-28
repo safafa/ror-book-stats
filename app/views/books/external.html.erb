@@ -1,5 +1,6 @@
 <h1>Uncategorized books</h1>
 <div>
-<%= render "books", books: @books %>
+<p>Total amount of hours: <%=@amount_external%> </p>
+<%= render "books", books: @externals %>
 <%= link_to "Add", new_book_path, class: "btn btn-success px-5 py-2" %>
 </div>

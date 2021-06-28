@@ -1,5 +1,6 @@
 <h1>Books#index</h1>
 <div>
+<p>Total amount of hours: <%=@amount%> </p>
 <%= render "books", books: @books %>
 <%= link_to "Add", new_book_path, class: "btn btn-success px-5 py-2" %>
 </div>
