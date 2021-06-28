@@ -1,6 +1,6 @@
 class BooksController < ApplicationController
   def index
-    @books = current_user.created_books
+    @books = current_user.created_books.includes(:author)
   end
 
   def external

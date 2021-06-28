@@ -1,13 +1,11 @@
-<h1> User profile <h1>
+<h1> <%= @user.username%> <h1>
 <div>
-Name : <%= @user.username%>
-
+<%= image_tag(@user.icon_link.url)%>
+<%= link_to "All my books", books_path %>
+<%= link_to "All my incategorized books",  external_books_path%>
+<%= link_to "All my groups", groups_path %>
 <h2>  stats <h2>
-
-<h3> Groups <h3>
-<%= render "groups/groups", groups: @user_groups%>
-<h3> Books <h3>
-<%= render "books/books", books:@user_books %>
+<%= @amount_hours%>
 <%= user_edit(@user)%>
 <%= user_cancel(@user)%>
 </div>
