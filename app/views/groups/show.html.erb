@@ -1,7 +1,13 @@
-<p>Total amount of hours: <%=@amount%> </p>
-<%=@group.name%>
-<%= image_tag(@group.icon.url)%>
-<h1> List of books </h1>
+<div class="d-flex w-100 my-3 align-content-start ">
+    <%= image_tag(@group.icon.url, class: "group_icon")%>
+    <div class="ms-2">
+        <h1 ><%=@group.name%></h1>
+        <small> Total amount of hours: <%=@amount%></small>
+    </div>
+    
+</div>
+
+<p class="align-self-center"> </p>
 <%= render "books/books", books: @books%>
 
 <%= link_to "Edit", edit_group_path(@group.id)%>
