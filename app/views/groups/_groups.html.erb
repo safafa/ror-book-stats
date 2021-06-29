@@ -1,0 +1,21 @@
+<div class="list-group mb-5 w-100">
+<% groups.each do |group|%>
+<a href= <%=group_path(group.id)%> class="list-group-item list-group-item-action my-2 ">
+    <div class="d-flex justify-content-between">
+     <div class="w-75 d-flex"> 
+        <img src=<%=group.icon.url%> class="group_icon"> 
+        <div class="ms-2">
+            <h5 class="mb-1"><%=group.name%></h5>
+            <small><%=group.created_at.strftime("%d/%m/%Y")%> </small>
+        </div>
+       </div>
+    <div class="align-self-start me-2">
+     <strong><%= group.books.sum(:amount)%> h </strong>
+    </div>
+    </div>
+    
+  </a>
+<div>
+</div>
+<%end%>
+</div>

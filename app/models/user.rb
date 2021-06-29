@@ -6,8 +6,9 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   validates :username, presence: true, length: { minimum: 6 }, uniqueness: true
-  has_many :created_books, foreign_key: 'author_id', class_name: 'Book'
-  has_many :groups
+  has_many :created_books, foreign_key: 'author_id', class_name: 'Book', dependent: :destroy
+  has_many :groups, dependent: :destroy
+  mount_uploader :icon_link, FileUploader
 
   def self.find_for_authentication(warden_condition)
     conditions = warden_condition.dup

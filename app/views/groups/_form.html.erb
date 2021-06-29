@@ -1,0 +1,8 @@
+<%= form_with model: group do |form|%>
+  <%= form.label :icon, "Icon: ", class: "form-label text-center"%>
+  <%= form.file_field :icon, class: "form-control" %>
+  <%= form.label :name, "Name: ", class: "form-label text-center"%>
+  <%= form.text_field :name, class: "form-control" %>
+  </br>
+  <%= form.submit "Submit", class:"btn btn-primary" %>
+<%end%>

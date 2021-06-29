@@ -1,2 +1,6 @@
-<h1>Groups#index</h1>
-<p>Find me in app/views/groups/index.html.erb</p>
+<h1><%= current_user.username%> groups :</h1>
+
+<div class="w-75"> 
+<%= render "groups", groups: @groups%>
+<%= link_to "Add", new_group_path, class: "btn bg-green px-5 py-2 w-100" %>
+</div>

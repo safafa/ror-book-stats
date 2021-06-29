@@ -8,14 +8,18 @@ module ApplicationHelper
   end
 
   def books_link(user)
-    link_to('Books', user_path(current_user.id), class: 'nav-link') if user
+    link_to('Books', books_path, class: 'nav-link link-light') if user
+  end
+
+  def externals_link(user)
+    link_to('External books', external_books_path, class: 'nav-link link-light') if user
   end
 
   def groups_link(user)
-    link_to('Groups', user_path(current_user.id), class: 'nav-link') if user
+    link_to('Groups', groups_path, class: 'nav-link link-light') if user
   end
 
   def profile_link(user)
-    link_to('Profile', user_path(current_user.id), class: 'nav-link') if user
+    link_to('Profile', user_path(current_user.id), class: 'nav-link link-light') if user
   end
 end
