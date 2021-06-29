@@ -34,7 +34,6 @@ gem 'devise'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
-  gem 'rspec-rails', '~> 5.0', '>= 5.0.1'
 end
 
 group :development do
@@ -51,7 +50,7 @@ group :development do
 end
 
 group :test do
-  gem 'rspec', '~> 3.10'
+  gem 'rspec-rails'
   gem 'shoulda', '~> 4.0'
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '>= 3.26'

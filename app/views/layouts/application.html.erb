@@ -27,11 +27,12 @@
                     <%= externals_link(current_user)%>
             </div>
           </nav>
-          <% if notice%> <p class="notice bg-success"><%= notice %></p><% end %>
-          <% if alert %><p class="alert bg-warning"><%= alert %></p><%end%>
+          
     </header>
     <main >
-      <section class="container d-flex flex-column align-items-center">
+          <% if notice%> <p class="notice bg-success"><%= notice %></p><% end %>
+          <% if alert %><p class="alert bg-warning"><%= alert %></p><%end%>
+      <section class="container d-flex flex-column align-items-center">  
       <%= yield %>
       </section>
     </main>
