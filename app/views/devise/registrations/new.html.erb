@@ -1,7 +1,7 @@
 <div class="card border-info my-5">
  <div class="card-body">
 <h5 class="card-title">Sign up</h5>
-<div class="my-5">
+<div class="my-3">
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
   <div class="field">
@@ -29,12 +29,12 @@
     <%= f.label :password_confirmation, class: "form-label text-center" %><br />
     <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control" %>
    </div>
-   </div>
-  <div class="btn btn-primary">
+   <br />
     <%= f.submit "Sign up", class:"btn btn-primary" %>
-   </div><br />
+   
 <% end %>
 
 <%= render "devise/shared/links" %>
+</div>
 </div>
 </div>
