@@ -13,25 +13,17 @@
  *= require_tree .
  *= require_self
  */
- .navbar {
-  position:relative;
-  display:flex;
-  flex-wrap:wrap;
-  align-items:center;
-  justify-content:space-between;
-  padding-top:.5rem;
-  padding-bottom:.5rem;
-}
 
 .bg-blue {
   margin: 0px;
   padding: 0px;
   background-attachment:fixed;
-  background-color: #2D639F;
+  background-color: #2d639F;
   background-image:
     linear-gradient(
-      45deg, 
-      #3678C2, #2D639F
+      45deg,
+      #3678C2,
+      #2d639F
     );
 }
 
