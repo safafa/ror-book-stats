@@ -1,6 +1,6 @@
-# Scaffold for social media app with Ruby on Rails
+# Capstone project Book stats with Ruby on Rails
 
-> Mini rails web application that allows users to keep track of there readings.
+> Mini rails web application that allows users to keep track of their readings.
 
 ## Built With
 
