@@ -14,34 +14,17 @@
   <body>
     
     <header>
-          <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
+          <nav class="d-flex flex-column justify-content-around navbar-light bg-blue">
+          <div class="align-self-start p-4">
+            <%= link_to(current_user) do %>
+            <i class="fas fa-bars text-light border-0 rounded-circle p-2" ></i>
+            <% end %>
+            
+          </div>
+           <div class="d-flex justify-content-around">
                     <%= groups_link(current_user)%>
-                  </li>
-                  <li class="nav-item">
                     <%= books_link(current_user)%>
-                  </li>
-                  <li class="nav-item">
                     <%= externals_link(current_user)%>
-                  </li>
-                  <li class="nav-item">
-                   <%= profile_link(current_user)%>
-                  </li>
-                </ul>
-                <div class="d-flex">
-                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <%= authentication_links(current_user) %>
-                  </li>
-                  </ul>
-                </div>
-              </div>
             </div>
           </nav>
           <% if notice%> <p class="notice bg-success"><%= notice %></p><% end %>
@@ -52,7 +35,7 @@
       <%= yield %>
       </section>
     </main>
-    <footer class="bg-dark text-light fixed-bottom">
+    <footer class="bg-dark text-light fixed-bottom bg-blue">
     <div class="d-flex justify-content-center align-items-center" ><p> ror capstone project</p> </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>

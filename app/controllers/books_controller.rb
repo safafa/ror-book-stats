@@ -1,6 +1,6 @@
 class BooksController < ApplicationController
   def index
-    @books = current_user.created_books.includes(:author).order('created_at DESC')
+    @books = current_user.created_books.includes(:group, :author).order('created_at DESC')
     @amount = @books.sum(:amount)
   end
 

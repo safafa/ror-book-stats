@@ -13,7 +13,7 @@
  *= require_tree .
  *= require_self
  */
- .navbar{
+ .navbar {
   position:relative;
   display:flex;
   flex-wrap:wrap;
@@ -23,4 +23,18 @@
   padding-bottom:.5rem;
 }
 
+.bg-blue {
+  margin: 0px;
+  padding: 0px;
+  background-attachment:fixed;
+  background-color: #2D639F;
+  background-image:
+    linear-gradient(
+      45deg, 
+      #3678C2, #2D639F
+    );
+}
 
+.bg-green {
+  background-color: #5fb523;
+}
