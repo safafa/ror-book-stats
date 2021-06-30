@@ -21,7 +21,9 @@ To get a local copy up and running follow these simple example steps.
 ### Prerequisites
 
 Ruby: 2.6.3
-Rails: 5.2.3
+npm: run <code> npm install </code>
+yarn
+Rails: 6.1.3
 Postgres: >=9.5
 
 ### Setup
