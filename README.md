@@ -1,6 +1,8 @@
 # Capstone project Book stats with Ruby on Rails
 
 > Mini rails web application that allows users to keep track of their readings.
+![screenshot](./docs/First.png)
+![screenshot](./docs/second.png)
 
 ## Built With
 
