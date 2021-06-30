@@ -1,7 +1,7 @@
 <div class="w-100 my-3  ">
   <div class="d-flex align-content-start">
     <%if @book.group%>
-    <%= image_tag(@book.group.icon.url, class: "group_icon")%>
+    <%= show_icon(@book.group.icon)%>
     <% end %>
     <div class="ms-2 d-flex flex-column">
         <h1 ><%=@book.name%></h1>

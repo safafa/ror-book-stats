@@ -5,7 +5,7 @@
         <div class="d-flex justify-content-between">
         <div class="w-75 d-flex"> 
         <% if book.group%>
-            <img src=<%=book.group.icon.url%> class="group_icon"> 
+           <%= show_icon(book.group.icon)%>
         <%end %>
             <div class="ms-2">
                <h5 class="mb-1"><%=book.name%></h5>

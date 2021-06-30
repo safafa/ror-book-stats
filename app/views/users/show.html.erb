@@ -1,6 +1,6 @@
 
 <div class ="d-flex flex-column align-items-center my-3 w-100">
-    <%= image_tag(@user.icon_link.url, class: "profile-icon")%>
+    <%= show_image(@user.icon_link)%>
     <h1> <%= @user.username%> <h1>
     <div class ="d-flex flex-column align-items-start">
     <div class="d-flex">
