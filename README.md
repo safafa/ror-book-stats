@@ -24,6 +24,12 @@ Postgres: >=9.5
 
 ### Setup
 
+Clone the repository with:
+```
+git clone https://github.com/safafa/ror-book-stats.git
+```
+Move to the root directory
+
 Instal gems with:
 
 ```
