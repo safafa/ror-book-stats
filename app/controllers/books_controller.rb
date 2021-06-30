@@ -1,11 +1,11 @@
 class BooksController < ApplicationController
   def index
-    @books = current_user.created_books.includes(:group, :author).order('created_at DESC')
+    @books = current_user.created_books.includes(:group, :author).ordered_by_date
     @amount = @books.sum(:amount)
   end
 
   def external
-    @externals = current_user.created_books.external.order('created_at DESC')
+    @externals = current_user.created_books.includes(:author).external.ordered_by_date
     @amount_externals = @externals.sum(:amount)
   end
 

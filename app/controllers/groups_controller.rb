@@ -1,11 +1,11 @@
 class GroupsController < ApplicationController
   def index
-    @groups = current_user.groups.order('name ASC')
+    @groups = current_user.groups.ordered_by_name
   end
 
   def show
     @group = Group.find(params[:id])
-    @books = @group.books
+    @books = @group.books.includes(:author)
     @amount = @books.sum(:amount)
   end
 
