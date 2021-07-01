@@ -1,0 +1,24 @@
+<div class="list-group mb-5 w-100">
+<% books.each do |book|%>
+<a href= <%= book_path(book.id)%> class="list-group-item list-group-item-action my-2 ">
+    <div class="d-flex justify-content-between ">
+        <div class="d-flex justify-content-between">
+        <div class="w-75 d-flex"> 
+        <% if book.group%>
+           <%= show_icon(book.group.icon)%>
+        <%end %>
+            <div class="ms-2">
+               <h5 class="mb-1"><%=book.name%></h5>
+                <small><%=book.created_at.strftime("%d/%m/%Y")%> </small>
+            </div>
+        </div>
+        </div>
+        <div class="w-25"><p><strong> belongs to:</strong> <%= book.author.username%></p> </div>
+
+    </div>
+    
+  </a>
+<div>
+</div>
+<%end%>
+</div>
