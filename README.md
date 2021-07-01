@@ -83,7 +83,7 @@ The application is deployed on heroku
 
 Contributions, issues and feature requests are welcome!
 
-Feel free to check the [issues page](issues/).
+Feel free to check the [issues page](https://github.com/safafa/ror-book-stats/issues/6).
 
 ## Show your support
 
