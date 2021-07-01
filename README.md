@@ -1,6 +1,8 @@
 # Capstone project Book stats with Ruby on Rails
 
 > Mini rails web application that allows users to keep track of their readings.
+![screenshot](./docs/First.png)
+![screenshot](./docs/second.png)
 
 ## Built With
 
@@ -19,10 +21,18 @@ To get a local copy up and running follow these simple example steps.
 ### Prerequisites
 
 Ruby: 2.6.3
-Rails: 5.2.3
+npm: run <code> npm install </code>
+yarn
+Rails: 6.1.3
 Postgres: >=9.5
 
 ### Setup
+
+Clone the repository with:
+```
+git clone https://github.com/safafa/ror-book-stats.git
+```
+Move to the root directory
 
 Instal gems with:
 

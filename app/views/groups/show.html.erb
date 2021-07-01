@@ -1,5 +1,5 @@
 <div class="d-flex w-100 my-3 align-content-start ">
-    <%= image_tag(@group.icon.url, class: "group_icon")%>
+    <%= show_icon(@group.icon)%>
     <div class="ms-2">
         <h1 ><%=@group.name%></h1>
         <small> Total amount of hours: <%=@amount%></small></br>
