@@ -4,6 +4,9 @@
 ![screenshot](./docs/First.png)
 ![screenshot](./docs/second.png)
 
+## Video presentation
+[presentation](https://www.loom.com/share/99d784e53e4c42e388a0050da96bd31a)
+
 ## Built With
 
 - Ruby v2.7.2
@@ -21,9 +24,13 @@ To get a local copy up and running follow these simple example steps.
 ### Prerequisites
 
 Ruby: 2.6.3
+
 npm: run <code> npm install </code>
+
 yarn
+
 Rails: 6.1.3
+
 Postgres: >=9.5
 
 ### Setup
